@@ -1,0 +1,226 @@
+
+// Exercice 
+
+Debut
+	Si Tutu > Toto + 4 OU Tata = "OK" Alors
+		Tutu ← Tutu + 1
+	Sinon
+		Tutu ← Tutu – 1
+	FinSi
+
+
+	Si Tutu <= Toto + 4 ET Tata <> "OK" Alors
+		Tutu ← Tutu - 1
+	Sinon
+		Tutu ← Tutu + 1
+	FinSi
+
+
+	Si Non(Tutu > Toto + 4) ET Non(Tata = "OK") Alors
+		Tutu ← Tutu - 1
+	Sinon
+		Tutu ← Tutu + 1
+	FinSi
+
+	
+Fin
+
+
+a ← Tata="OK"
+
+b ← Tata<>"OK"
+
+a = Non(b)
+
+
+
+
+
+// Exercice 4.2
+Variable h, m en Numerique
+Debut
+	Ecrire "Entrez h"
+	Lire h
+	Ecrire "Entrez m"
+	Lire m
+
+	Si m>58 Alors
+		m ← 0
+		h ← h+1
+	Sinon
+		m ← m + 1
+	FinSi
+	
+	Ecrire "Dans une minute, il sera " & h & " heure " & m
+Fin
+
+
+// Exercice 4.3
+Variable h, m, s en Numerique
+Debut
+	Ecrire "Entrez h"
+	Lire h
+	Ecrire "Entrez m"
+	Lire m
+	Ecrire "Entrez s"
+	Lire s
+
+	s ← s + 1
+
+	Si s=60 Alors
+		s ← 0
+		m ← m + 1 
+		Si m=60 Alors
+			m ← 0
+			h ← h + 1
+		FinSi
+	FinSi
+	
+	Ecrire "Dans une minute, il sera " & h & " heure " & m
+Fin
+
+
+
+// Exercice 4.4
+Variable nombre, total en Numerique
+Debut
+	Ecrire "Entrez un nombre"
+	Lire nombre
+	
+	Si nombre<=10 Alors
+		total ← nombre * 0.10
+	Sinon
+		Si nombre<=30 Alors
+			total ← 10*0.1 + (nombre-10)*0.9
+		Sinon
+			total = 10*0.1 + 20*0.9 + (nombre-30)*0.8
+		FinSi
+	FinSi
+
+	Ecrire total
+Fin
+
+
+
+
+// Exercice 4.5
+Variable age, sexe en Numerique
+Debut
+	Ecrire "Entrez votre age"
+	Lire age
+	Ecrire "Etes vous Homme/Femme (H/F)"
+	Lire sexe
+
+	Si (sexe="H" et age>20) ou (sexe="F" et age>=18 et age<=35) Alors
+		Ecrire "Pas de bol"
+	Sinon
+		Ecrire "Cool"
+	FinSi
+	
+Fin
+
+
+
+
+
+// Exercice 4.6
+Variable c1, c2, c3, c4 en Numerique
+Debut
+	Ecrire "Entrez les scores"
+	Lire c1, c2, c3, c4
+
+	Si c1>50 Alors
+		Ecrire "Elu au premier tour"
+	Sinon
+		Si c1 < 12.5 Alors 
+			Ecrire "Perdu"
+		Sinon
+			Si c1>c2 et c1>c3 et c1>c4 Alors
+				Ecrire "Favorable"
+			Sinon
+				Ecrire "Défavorable"
+			FinSi
+		FinSi
+	FinSi
+Fin
+
+
+
+
+
+// Exercice 
+Variable age, duree, nb, anciennete en Numerique
+Debut
+	Ecrire "Entrez votre age"
+	Lire age
+	Ecrire "Durée permis"
+	Lire duree
+	Ecrire "Nombre d'accidents"
+	Lire nb
+	Ecrire "Ancienneté"
+	Lire anciennete
+
+
+
+	Si age<25 et nb=0 et duree<2 Alors
+		Ecrire "Rouge"
+	FinSi
+	Si (age<25 et duree>2) ou (age>25 et duree<2) Alors
+		Si (nb>0) Alors
+			Ecrire "Rouge"
+		Sinon
+			Ecrire "Orange"
+		FinSi
+	FinSi
+
+
+
+	
+Fin
+
+
+
+
+
+
+// Exercice 
+Variable j, m, a en Numerique
+Debut
+	Ecrire "Entrez une date"
+	Lire j, m, a
+
+	Si m<1 ou m>12 Alors
+		Ecrire "Mois incorrect"
+	Sinon
+		Si j<1 Alors
+			Ecrire "Jour !!"
+		Sinon
+			Si (m=1 ou m=3 ou m=5 ou m=7 ou m=8 ou m=10 m=12) et j>31 Alors
+				Ecrire "Jour !!"
+			Sinon
+				Si (m=4 ou m=6 ou m=9 ou m=11) et j>30 Alors
+					Ecrire "Jour !!"
+				Sinon
+					Si m=2 Alors
+						Si a dp 4 et (non(a dp 100) et (a dp 400)) Alors
+							Si j>29 Alors
+								Ecrire "Jour !!"
+							Sinon
+								Ecrire "OK"
+							FinSi
+						Sinon
+							Si j>28 Alors
+								Ecrire "Jour !!"
+							Sinon
+								Ecrire "OK"
+							FinSi
+						FinSi
+					Sinon
+						Ecrire "OK"
+					FinSi
+				FinSi
+			FinSi
+		FinSi
+	FinSi
+	
+Fin

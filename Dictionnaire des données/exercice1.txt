@@ -1,0 +1,20 @@
+sta_numero				entier
+sta_nom 				chaine(50)
+sta_prenom 				chaine(50)
+sta_datedenaissance 	date
+sta_age (calcul) 		entier
+sta_civilite 			chaine(4)
+sta_adresse				chaine(50)
+sta_codepostal			chaine(5)
+sta_ville				chaine(50)
+sta_pays 				chaine(50)
+
+for_numero				entier
+for_intitule 			chaine(50)
+for_titre				chaine(50)
+for_niveau				chaine(5)
+for_datedebut			date
+for_datefin				date
+for_duree (calcul)		entier
+
+

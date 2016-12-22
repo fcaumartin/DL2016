@@ -84,7 +84,7 @@ Debut
 Fin
 
 
-// Exercice 3.2
+// Exercice 3.3
 Variable n1, n2, n3 en Carateres
 Debut
 	Ecrire "Entrez un nom"
@@ -99,3 +99,83 @@ Debut
 		Ecrire "Dans le désordre"
 	FinSi
 Fin
+
+// Exercice 3.4
+Variable nombre en Numerique
+Debut
+	Ecrire "Entrez un nombre"
+	Lire nombre
+	Si nombre=0 Alors
+		Ecrire "C'est nul"
+	Sinon
+		Si nombre>0 Alors
+			Ecrire "Positif"
+		Sinon
+			Ecrire "Négatif"
+		FinSi
+	FinSi
+Fin
+
+
+// Exercice 3.5
+Variable n1, n2 en Numerique
+Debut
+	Ecrire "Entrez un nombre"
+	Lire n1
+	Ecrire "Entrez un nombre"
+	Lire n2
+	Si n1=0 or n2=0 Alors
+		Ecrire "Nul"
+	Sinon
+		Si n1<0 xor n2<0 Alors
+			Ecrire "Négatif"
+		Sinon
+			Ecrire "Positif"
+		FinSi
+	FinSi
+Fin
+
+
+
+// Exercice 3.6
+Variable nombre en Numerique
+Debut
+	Ecrire "Entrez votre age"
+	Lire age
+	Si age>=6 et age<=7 Alors
+		Ecrire "Poussin"
+	FinSi
+	Si age>=8 et age<=9 Alors
+		Ecrire "Pupille"
+	FinSi
+	Si age>=10 et age<=11 Alors
+		Ecrire "Minime"
+	FinSi
+	Si age>=12 Alors
+		Ecrire "Cadet"
+	FinSi
+Fin
+
+
+// Exercice 3.6
+Variable nombre en Numerique
+Debut
+	Ecrire "Entrez votre age"
+	Lire age
+	Si age>=12 Alors
+		Ecrire "Cadet"
+	Sinon
+		Si age>=10 Alors
+			Ecrire "Minime"
+		Sinon
+			Si age>=8 Alors
+				Ecrire "Pupille"
+			Sinon
+				Si age>=6 Alors
+					Ecrire "Poussin"
+				FinSi
+			FinSi
+		FinSi
+	FinSi
+Fin
+
