@@ -1,0 +1,101 @@
+
+// Exercice 
+Variable nombre en Numerique
+Debut
+	Ecrire "Entrez un nombre"
+	Lire nombre
+	Si nombre=0 Alors
+		Ecrire "C'est nul"
+	Sinon
+		Si nombre>0 Alors
+			Ecrire "Positif"
+		Sinon
+			Ecrire "Négatif"
+		FinSi
+	FinSi
+Fin
+
+
+Variable Temp en Entier
+Début
+ Ecrire “Entrez la température de l’eau :”
+ Lire Temp
+ Si Temp =< 0 Alors
+ 	Ecrire “C’est de la glace“
+ FinSi
+ Si Temp > 0 Et Temp < 100 Alors
+ 	Ecrire “C’est du liquide”
+ FinSi
+ Si Temp > 100 Alors
+ 	Ecrire “C’est de la vapeur”
+ FinSi
+Fin
+
+
+
+Variable Temp en Entier
+Début
+	Ecrire “Entrez la température de l’eau :”
+	Lire Temp
+	Si Temp =< 0 Alors
+		Ecrire “C’est de la glace“
+	Sinon
+		Si Temp < 100 Alors
+			Ecrire “C’est du liquide”
+		Sinon
+			Ecrire “C’est de la vapeur”
+		FinSi
+	FinSi
+Fin
+
+
+Variable Temp en Entier
+Variable cond en Booleen
+Début
+	Ecrire “Entrez la température de l’eau :”
+	Lire Temp
+	cond ← Temp =< 0
+	Si cond Alors
+		Ecrire “C’est de la glace“
+	Sinon
+		Si Temp < 100 Alors
+			Ecrire “C’est du liquide”
+		Sinon
+			Ecrire “C’est de la vapeur”
+		FinSi
+	FinSi
+Fin
+
+
+
+
+// Exercice 3.2
+Variable n1, n2 en Numerique
+Debut
+	Ecrire "Entrez un nombre"
+	Lire n1
+	Ecrire "Entrez un nombre"
+	Lire n2
+	Si n1<0 xor n2<0 Alors
+		Ecrire "Négatif"
+	Sinon
+		Ecrire "Positif"
+	FinSi
+Fin
+
+
+// Exercice 3.2
+Variable n1, n2, n3 en Carateres
+Debut
+	Ecrire "Entrez un nom"
+	Lire n1
+	Ecrire "Entrez un nom"
+	Lire n2
+	Ecrire "Entrez un nom"
+	Lire n3
+	Si n1<n2 et n2<n3 Alors
+		Ecrire "Dans l'ordre"
+	Sinon
+		Ecrire "Dans le désordre"
+	FinSi
+Fin

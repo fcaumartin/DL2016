@@ -1,0 +1,16 @@
+A ← Il fait beau
+B ← Ma copine veut bien
+
+C ← Je peux aller me promener
+
+C ← A et B
+
+Non(C) ← Non(A) ou Non(B)
+
+
+A ← Il fait pas beau
+B ← Ma copine veut pas
+
+C ← Je peux pas aller me promener
+
+C ← A ou B

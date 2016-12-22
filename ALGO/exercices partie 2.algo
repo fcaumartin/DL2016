@@ -1,0 +1,59 @@
+// Exercice 2.2
+Variable nombre, carre en Numerique
+Debut
+	Ecrire "Entrez un nombre"
+	Lire nombre
+	carre ← nombre * nombre
+	carre ← nombre ^ 2
+	Ecrire carre
+Fin
+
+// Exercice 2.2
+Variable nombre en Numerique
+Debut
+	Ecrire "Entrez un nombre"
+	Lire nombre
+	Ecrire nombre * nombre
+Fin
+
+
+// Exercice 
+Variable PHT, QTE, TVA, TTC en Numerique
+Debut
+	Ecrire "Entrez un prix HT"
+	Lire PHT
+	Ecrire "Entrez une quantité"
+	Lire QTE
+	Ecrire "Entrez le taux de TVA (pour 20% entrez 1.2)"
+	Lire TVA
+	TTC ← PHT * TVA * QTE
+	Ecrire "Total TTC = " & TTC
+Fin
+
+// Exercice 
+Variable PHT, QTE, TVA, TTC en Numerique
+Debut
+	Ecrire "Entrez un prix HT"
+	Lire PHT
+	Ecrire "Entrez une quantité"
+	Lire QTE
+	Ecrire "Entrez le taux de TVA (pour 20% entrez 20)"
+	Lire TVA
+	TTC ← PHT + ((PHT * TVA) / 100) * QTE
+	Ecrire "Total TTC = " & TTC
+Fin
+
+
+
+// Exercice 
+Variable a, b, c, d en Caractères
+Debut
+	a ← "belle marquise"
+	b ← "vos beaux yeux"
+	c ← "me font mourir"
+	d ← "d’amour"
+	
+	Ecrire a & b & c & d
+
+	Ecrire c & a & b & d
+Fin
