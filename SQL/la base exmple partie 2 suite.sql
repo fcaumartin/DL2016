@@ -196,4 +196,4 @@ select nodep from employe)
 
 select * 
 from employe 
-full join dept on employe.nodep=dept.nodept
+right join dept on employe.nodep=dept.nodept
