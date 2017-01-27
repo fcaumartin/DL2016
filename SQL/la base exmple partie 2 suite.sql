@@ -197,3 +197,90 @@ select nodep from employe)
 select * 
 from employe 
 right join dept on employe.nodep=dept.nodept
+
+
+
+select sum(salaire) from employe
+
+
+--1. Calculer le nombre d'employés de chaque titre.
+
+select * from employe
+
+select titre, count(*) --, min(salaire), max(salaire)
+from employe
+group by titre
+
+--2. Calculer la moyenne des salaires et leur somme, par région.
+
+select noregion, avg(salaire), sum(salaire)
+from employe
+join dept on nodep=nodept
+group by noregion
+
+
+--3. Afficher les numéros des départements ayant au moins 3 employés. 
+
+select * from employe
+
+select nodep, count(*) 
+from employe
+-- where titre='representant'
+group by nodep
+having count(*)>=3
+
+
+--4. Afficher les lettres qui sont l'initiale d'au moins trois employés.
+
+select SUBSTRING(nom, 1, 1), count(*) as 'nombre'
+from employe
+group by SUBSTRING(nom, 1, 1)
+having count(*)>3
+
+
+--5. Rechercher le salaire maximum et le salaire minimum parmi tous les
+--salariés et l'écart entre les deux. 
+
+select min(salaire), max(salaire), max(salaire)-min(salaire)
+from employe
+
+
+--6. Rechercher le nombre de titres différents. 
+
+select count(distinct titre) from employe
+
+
+
+--7. Pour chaque titre, compter le nombre d'employés possédant ce titre. 
+
+
+select titre, count(*) 
+from employe
+group by titre
+
+
+--8. Pour chaque nom de département, afficher le nom du département et
+--le nombre d'employés.
+
+select dept.nom, count(*)
+from employe
+join dept on nodep=nodept
+group by dept.nom
+
+
+
+--9. Rechercher les titres et la moyenne des salaires par titre dont la
+--moyenne est supérieure à la moyenne des salaires des Représentants
+
+select titre, avg(salaire)
+from employe
+group by titre
+having avg(salaire) > (select avg(salaire) from employe where titre='representant')
+
+
+--10.Rechercher le nombre de salaires renseignés et le nombre de taux de
+--commission renseignés. 
+
+select count(salaire), count(tauxcom) from employe
+
+
