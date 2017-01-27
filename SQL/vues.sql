@@ -11,6 +11,8 @@ where p.stkphy < p.stkale*1.5 and v.delliv<=30
 
 
 
+
+
 select * from toto where Produit.stkphy>100
 go
 drop view commandes
