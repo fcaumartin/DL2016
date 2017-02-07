@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="a002bcda-1a25-413b-b262-4cddeca97505" name="UMLClassDiagram2" linkedPackageId="b2ee68ff-b9f3-4295-9b11-db1dbb321870" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="f7e3b033-4209-4701-ac01-6cf4fa85903b" name="ModeleBDD">
+        <elementDefinition Id="656002f1-c0b9-4261-bdf5-ef2a013f7c63" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="467b806a-a50b-4439-83d9-97a1f4508d16" name="Vehicule" isAbstract="true" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="eee93ba7-bd9a-43ed-9be4-3019759d00cd" />
+              <ownedAttributesInternal>
+                <property Id="9f4737d2-b079-45e7-b64c-f76912c17f31" name="poid" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6498f148-091b-488b-be6c-8ccf9ce17355" />
+                </property>
+                <property Id="ab296140-2382-49c8-a3ca-21fb1a587987" name="dimension" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3f6e4c5f-1e5d-49a5-9aac-6181ba70dc1c" />
+                </property>
+                <property Id="7b55fd2c-f287-48d7-8798-d6625e365e92" name="vitesse" visibility="Protected" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="843bc18a-629a-42d0-8c0d-56ac79a4a104" />
+                </property>
+              </ownedAttributesInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="45074866-0f32-4de6-a731-14242f76e327" name="Roulant" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="f89406e2-1ba2-46eb-be8e-55e2e1b88d4e" />
+              <generalsInternal>
+                <generalization Id="1cfad996-69e8-47bd-a7e8-91adc2c80b3f" isSubstitutable="false">
+                  <classMoniker Id="467b806a-a50b-4439-83d9-97a1f4508d16" LastKnownName="Vehicule" />
+                  <elementDefinition Id="7163c1b0-f3ec-4983-9cf9-8b9e49b3bac9" />
+                </generalization>
+              </generalsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="c6c431ee-e8f1-4f2b-b9e7-fa90f88c3281" name="Flottant" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="b9b74710-255a-45c2-9846-c2ea766b6f45" />
+              <generalsInternal>
+                <generalization Id="d37b917c-f27e-48fa-91fc-665b18fc9ab6" isSubstitutable="false">
+                  <classMoniker Id="467b806a-a50b-4439-83d9-97a1f4508d16" LastKnownName="Vehicule" />
+                  <elementDefinition Id="4ab2ee86-215c-49f3-b6e9-0397f04b54e1" />
+                </generalization>
+              </generalsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="c6ffc848-c358-45df-96e7-8a7420ee29f4" name="Volant" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="fcf242d0-8a3c-4ada-a6eb-157f5edec7ed" />
+              <generalsInternal>
+                <generalization Id="8f957cc3-c4a7-4ce7-8458-a2bcf8b40b30" isSubstitutable="false">
+                  <classMoniker Id="467b806a-a50b-4439-83d9-97a1f4508d16" LastKnownName="Vehicule" />
+                  <elementDefinition Id="82902fcf-4d46-42b9-b0b5-fee3fdaddcd3" />
+                </generalization>
+              </generalsInternal>
+              <ownedAttributesInternal>
+                <property Id="c9905ce7-67c9-4b30-85a5-dbdfc1c010e0" name="altitude" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d1ca9d7b-3d02-4e92-9b92-bd68daf287ae" />
+                </property>
+                <property Id="364ce020-bfe1-468d-aad9-e583bb6918ae" name="Attribute1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c8b153f4-0219-4518-bdfa-d1e21579535f" />
+                </property>
+              </ownedAttributesInternal>
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+  </packagedElements>
+  <package Id="b2ee68ff-b9f3-4295-9b11-db1dbb321870" name="ModelingProject2">
+    <elementDefinition Id="ba08a39d-f933-4cbf-96c6-316792e2d574" />
+    <profileInstances>
+      <packageHasProfileInstances Id="26f0735e-a591-4500-8e66-c984c3b6f126">
+        <profileInstance Id="243136d9-0916-44e7-9886-97d989d1b045" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="6b14708d-13bc-467b-96b4-281c3e59b1ab">
+        <profileInstance Id="07ac043a-296a-40c0-b7d4-75bc51b2f3fb" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

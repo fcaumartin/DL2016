@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="10c43c14-0a1d-49e8-bc12-884a4f364e7b" name="UMLClassDiagram1" linkedPackageId="696f5332-d845-473b-9ffd-e9c485c0c9b1" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="a359628d-bd00-4dc8-aa11-34d8ce82512f">
+      <profileInstance Id="9c254cce-0ac5-4084-b7eb-702febf35b6c" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="37d14af4-8599-4357-8900-389c3cf0a984">
+      <profileInstance Id="49535a5f-cb6b-4f50-b00b-abeec37802b2" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="58053d17-2ffb-46ab-8fdc-b986d604e29f" name="Stagiaire" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ff20fd83-fe9a-4b42-aba3-cf34023c6968" />
+        <generalsInternal>
+          <generalization Id="701bf75a-2259-4d96-aa54-4e75bc070632" isSubstitutable="false">
+            <classMoniker Id="d2b4b337-ff4b-4b9f-95e5-22d2b801630b" LastKnownName="Personne" />
+            <elementDefinition Id="70b40d59-d9a5-47ee-8ad0-10018f1b2967" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="a2c05e88-d253-428e-9f47-717e1a34d37c" isDerived="false" sourceEndRoleName="Stagiaire" targetEndRoleName="Suit" isLeaf="false" isAbstract="false">
+            <classMoniker Id="eb8a4991-7848-4d39-baea-b6ccc99e24f3" LastKnownName="Suit" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="53118096-6b35-4a7a-89d9-3128c5a702ae" name="Stagiaire" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="bfa5fd62-7979-46d1-a923-51f82bb180af" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="910d544d-e228-4fa9-b0c3-9be389d85595" name="Suit" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e2461713-5a55-467e-97b0-4524ee383957" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c07079c2-c20b-4e73-adf7-dbaaaa229bab" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="646912ed-9e32-450a-afe3-a0c221c4428f" name="Password" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="80ed6d83-b9d0-4458-a909-eed2aee94018" />
+          </property>
+          <property Id="6900c806-f3ec-4078-bb0c-ae513913b8e7" name="Carte de catinne" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="57c3a89c-ea31-452f-8361-5b8893eeeea7" />
+          </property>
+          <property Id="b806957e-7796-47cb-9535-435b3953ec72" name="Inscription" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9afa060a-31c9-4925-b2cd-a4c639202a31" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="315efab8-c86a-43d2-8898-aa295f8fdcd6" name="Formation" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="220d1862-47ef-4295-9418-086650e925f9" />
+        <ownedAttributesInternal>
+          <property Id="64b7d824-92c6-46f8-9786-33af245d2b76" name="Numero" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d219cf35-c5dc-4eec-ad6c-fd10f4f9fa5f" />
+          </property>
+          <property Id="fb6a6665-f01b-4e0c-91e4-09a9537804de" name="Libelle" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c5272dab-f13f-4000-a3dd-46762e3bc9a1" />
+          </property>
+          <property Id="e823262e-2539-4d04-a94d-8dce2dcafaf2" name="Niveau" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="fdbc7e57-71f8-4314-b5dc-8f4aeb75b610" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="eb8a4991-7848-4d39-baea-b6ccc99e24f3" name="Suit" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="057ced44-97f8-4051-a952-b43d04a33d5f" />
+        <targetEnds>
+          <association Id="36abb517-7232-4c5f-bd5d-c7bbe2218873" isDerived="false" sourceEndRoleName="Suit" targetEndRoleName="Formation" isLeaf="false" isAbstract="false">
+            <classMoniker Id="315efab8-c86a-43d2-8898-aa295f8fdcd6" LastKnownName="Formation" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b20ac80a-3798-4f11-b197-bc4430ff34d5" name="Suit" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="497565f5-4a7a-4ca0-9040-e3f522d537e0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fbde550d-a043-45be-b89e-2d38c2cb0f3c" name="Formation" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="29f5c894-b6e0-4cd7-9d60-a1165b6a4b42" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c40aaa9d-633b-473f-ae85-ca5644132d44" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="1ddfaf5f-8138-45ee-8fe1-f02a2fb83455" name="Date_formation" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c1300989-2604-4fda-a5fd-a06aca210588" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d2b4b337-ff4b-4b9f-95e5-22d2b801630b" name="Personne" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f986ce0b-3dff-450f-8b9d-5518d2cbb6ff" />
+        <ownedAttributesInternal>
+          <property Id="9ec4b576-f5b6-472a-a481-ef69c153438b" name="Nom" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="ba9957e4-80a9-46d6-9a58-9f5ce3ec0591" />
+          </property>
+          <property Id="11b6b3c8-7ea4-4b91-b168-9e86fdad3046" name="Prenom" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="1f635d88-020c-4e88-b199-f51b9c111851" />
+          </property>
+          <property Id="3a97f521-4fcf-4afe-ba14-6fd2d9ba7be1" name="Adresse" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a69271cd-6b32-41c5-853f-d52b55967a74" />
+          </property>
+          <property Id="d59b1efc-2e00-44a5-a236-ce26053fb07c" name="Ville" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7a7f0751-1287-4897-ae58-1cd296137f51" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="696f5332-d845-473b-9ffd-e9c485c0c9b1" name="ModelingProject2">
+    <elementDefinition Id="ba08a39d-f933-4cbf-96c6-316792e2d574" />
+  </package>
+</logicalClassDesignerModel>

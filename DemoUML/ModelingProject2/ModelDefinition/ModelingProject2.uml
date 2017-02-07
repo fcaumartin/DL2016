@@ -3,6 +3,16 @@
   dslVersion="1.0.0.0"
   Id="ba08a39d-f933-4cbf-96c6-316792e2d574"
   name="ModelingProject2" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="cd344604-de48-43cb-b3f2-cec544aa2bf5">
+      <body>Refus</body>
+    </comment>
+    <comment
+      Id="1b7948f3-43d9-4ee8-9c88-e982ba65ef93">
+      <body>Emprunt enregistré</body>
+    </comment>
+  </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances
       Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
@@ -2288,6 +2298,701 @@
           </opaqueAction>
         </nodes>
       </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="30b926df-5559-43e7-9758-431b9f8ab353"
+        name="Activity2"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="a294b621-642d-408a-9184-5e5a04762457"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="948e5cdf-8271-454c-805f-d7a245584cc0"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="dbc9bff8-29d4-4851-ae7c-9cfaef7469c6"
+                  LastKnownName="Creation d'un nouvea pret"
+                  LastKnownLocation="ModelingProject2.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <activityFinalNode
+            Id="3ef94534-0c08-4891-bde2-4db5c1d0fb2b"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <opaqueAction
+            Id="dbc9bff8-29d4-4851-ae7c-9cfaef7469c6"
+            name="Creation d'un nouvea pret"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="15bfcf70-a044-4a80-a039-81b2b17f1a59"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="2c0dba48-35e5-4f46-91b0-6803ae1f7671"
+                  LastKnownName="Verification des informations du client"
+                  LastKnownLocation="ModelingProject2.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="2c0dba48-35e5-4f46-91b0-6803ae1f7671"
+            name="Verification des informations du client"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="2301b037-b3fc-4a3a-a918-eb35a829dbd7"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="afd4e121-4bec-4bbd-860c-d17813d1bc7d"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="ModelingProject2.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="afd4e121-4bec-4bbd-860c-d17813d1bc7d"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="60d48ba6-f0c2-431f-8bcc-b571f249bd40"
+                guard="OK"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="f3d91188-675d-4e1e-95d2-8a1c22694573"
+                  LastKnownName="Vérification de la ressource"
+                  LastKnownLocation="ModelingProject2.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="22be4d34-6d96-4741-ae72-ed7f9fd0a5a4"
+                guard="Pas bon"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="3ef94534-0c08-4891-bde2-4db5c1d0fb2b"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="ModelingProject2.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="f3d91188-675d-4e1e-95d2-8a1c22694573"
+            name="Vérification de la ressource"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="4045de7e-312d-4dd0-a96e-93359517de26"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="92e3ba35-0db9-40ed-ab29-e08bebfcdb78"
+                  LastKnownName="Decision2"
+                  LastKnownLocation="ModelingProject2.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="92e3ba35-0db9-40ed-ab29-e08bebfcdb78"
+            name="Decision2"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="8f47b817-cbff-4931-ae6e-225fd4ae5625"
+                guard="MicroFilm"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="9490ef2b-e83a-4082-9095-c7a6dc7994a5"
+                  LastKnownName="Action3"
+                  LastKnownLocation="ModelingProject2.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="f9965175-d7cf-494e-83f7-ef2a0414e1a4"
+                guard="CDROM"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="961d4f31-5e54-4b51-a9b3-847ff33bc0c0"
+                  LastKnownName="Vérifier la caution"
+                  LastKnownLocation="ModelingProject2.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="f287c36c-a51c-4250-8660-3deb1c64b955"
+                guard="Livre"
+                isLeaf="false">
+                <mergeNodeMoniker
+                  Id="baa7ee72-559f-4461-8663-07c46ad8edd5"
+                  LastKnownName="Merge1"
+                  LastKnownLocation="ModelingProject2.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="961d4f31-5e54-4b51-a9b3-847ff33bc0c0"
+            name="Vérifier la caution"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="4bc7aff5-7436-4e15-a127-225240df30c4"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="6d93663c-24a4-4b2f-b913-945d0ff616cb"
+                  LastKnownName="Decision4"
+                  LastKnownLocation="ModelingProject2.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="f5d96d5b-08f7-40b3-b503-4032b54f1a2a"
+            name="Verifier la dispo"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="b29901fc-1c2e-43fd-bc3a-8a5f51530d94"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="1feb40d4-8eca-4352-90f6-9b2262b6f559"
+                  LastKnownName="Decision3"
+                  LastKnownLocation="ModelingProject2.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="9490ef2b-e83a-4082-9095-c7a6dc7994a5"
+            name="Action3"
+            isLeaf="false" />
+          <activityFinalNode
+            Id="abf2d5b9-9fb9-4a5a-bbdd-b5cf4a76a3db"
+            name="ActivityFinal2"
+            isLeaf="false" />
+          <decisionNode
+            Id="1feb40d4-8eca-4352-90f6-9b2262b6f559"
+            name="Decision3"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="eae91008-abb8-4b8f-b784-216a9b89c04b"
+                guard="Non dispo"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="3ef94534-0c08-4891-bde2-4db5c1d0fb2b"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="ModelingProject2.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="35edf926-020f-4acb-8580-d59cf6ab73da"
+                guard="OK"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="abf2d5b9-9fb9-4a5a-bbdd-b5cf4a76a3db"
+                  LastKnownName="ActivityFinal2"
+                  LastKnownLocation="ModelingProject2.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <decisionNode
+            Id="6d93663c-24a4-4b2f-b913-945d0ff616cb"
+            name="Decision4"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="adb1a7a7-16ea-4e16-9004-c20bea42a8e1"
+                guard="Non"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="3ef94534-0c08-4891-bde2-4db5c1d0fb2b"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="ModelingProject2.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="6f873bfb-5880-4559-9125-2ae99c5b1ecb"
+                isLeaf="false">
+                <mergeNodeMoniker
+                  Id="baa7ee72-559f-4461-8663-07c46ad8edd5"
+                  LastKnownName="Merge1"
+                  LastKnownLocation="ModelingProject2.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <mergeNode
+            Id="baa7ee72-559f-4461-8663-07c46ad8edd5"
+            name="Merge1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="2acd6334-a2fd-44fe-8361-b58d4e2a2b42"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="f5d96d5b-08f7-40b3-b503-4032b54f1a2a"
+                  LastKnownName="Verifier la dispo"
+                  LastKnownLocation="ModelingProject2.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="de79254e-9e46-4d66-b6a6-aa273a075220"
+        name="Activity3"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <opaqueAction
+            Id="c3cef32f-b3e4-4766-ae72-9ff3b7972d7e"
+            name="Acheté"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="734b02ad-5cbe-4327-afe7-028c6de34773"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="79b2aa1c-5d1c-48ba-a66b-103a309524e6"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="ModelingProject2.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="d90f65b5-217d-433f-82d8-20a5f3c0e729"
+            name="En rayon"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="fbaa53cb-7b61-4c03-8c79-3ee79f14c218"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="4b8c4a7b-0820-4efd-89a6-47ba83c13e6e"
+                  LastKnownName="Decision2"
+                  LastKnownLocation="ModelingProject2.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="6c2126ec-1074-47ce-97bd-0a2cbee2b771"
+            name="En pret"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="71faedec-d28c-4f1e-9e9b-7decef10a5cb"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="565a9db1-86be-4405-8269-65c9a23ac414"
+                  LastKnownName="Decision3"
+                  LastKnownLocation="ModelingProject2.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="62bfbc00-5b6e-4cc6-a47e-e41a2598139e"
+            name="Rebus / Perdu"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="1356afe4-d9da-4ceb-b66c-ac2af33bdf80"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="7651cc22-355c-4a8a-9f75-a33faecb1166"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="ModelingProject2.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <initialNode
+            Id="3e07d5e2-a25a-493d-be0c-c650a335ee09"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="7a67c6b4-5528-43da-b2b0-ee12ae5d5483"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="c3cef32f-b3e4-4766-ae72-9ff3b7972d7e"
+                  LastKnownName="Acheté"
+                  LastKnownLocation="ModelingProject2.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="7b979885-47a3-4b10-9820-69ec35804cd7"
+            name="Enregistrement"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="fbfd6370-027b-4c4a-bb82-0c58d5049f03"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="d90f65b5-217d-433f-82d8-20a5f3c0e729"
+                  LastKnownName="En rayon"
+                  LastKnownLocation="ModelingProject2.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="79b2aa1c-5d1c-48ba-a66b-103a309524e6"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="eaab22db-b7d0-4cf9-9490-4f3e56ed71ea"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="7b979885-47a3-4b10-9820-69ec35804cd7"
+                  LastKnownName="Enregistrement"
+                  LastKnownLocation="ModelingProject2.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="5e844374-e0b4-43d5-be85-ab2cbf9f0068"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="62bfbc00-5b6e-4cc6-a47e-e41a2598139e"
+                  LastKnownName="Rebus / Perdu"
+                  LastKnownLocation="ModelingProject2.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <decisionNode
+            Id="4b8c4a7b-0820-4efd-89a6-47ba83c13e6e"
+            name="Decision2"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="2334ed22-7d77-491a-b30e-61df8a3ed822"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="6c2126ec-1074-47ce-97bd-0a2cbee2b771"
+                  LastKnownName="En pret"
+                  LastKnownLocation="ModelingProject2.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="e4671238-b09a-4dda-9b44-34b802860524"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="62bfbc00-5b6e-4cc6-a47e-e41a2598139e"
+                  LastKnownName="Rebus / Perdu"
+                  LastKnownLocation="ModelingProject2.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <decisionNode
+            Id="565a9db1-86be-4405-8269-65c9a23ac414"
+            name="Decision3"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="a732167f-ba85-49b5-8b66-bf20e2b5e234"
+                guard="Ne rentre pas"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="62bfbc00-5b6e-4cc6-a47e-e41a2598139e"
+                  LastKnownName="Rebus / Perdu"
+                  LastKnownLocation="ModelingProject2.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="0716b9b0-1ad4-4c6d-a5e7-6f7e84f56379"
+                guard="Bon état"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="d90f65b5-217d-433f-82d8-20a5f3c0e729"
+                  LastKnownName="En rayon"
+                  LastKnownLocation="ModelingProject2.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <activityFinalNode
+            Id="7651cc22-355c-4a8a-9f75-a33faecb1166"
+            name="ActivityFinal1"
+            isLeaf="false" />
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="ff20fd83-fe9a-4b42-aba3-cf34023c6968"
+        name="Stagiaire"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="70b40d59-d9a5-47ee-8ad0-10018f1b2967"
+            isSubstitutable="false">
+            <classMoniker
+              Id="f986ce0b-3dff-450f-8b9d-5518d2cbb6ff"
+              LastKnownName="Personne"
+              LastKnownLocation="ModelingProject2.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="c07079c2-c20b-4e73-adf7-dbaaaa229bab"
+            isDerived="false"
+            sourceEndRoleName="Stagiaire"
+            targetEndRoleName="Suit"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="057ced44-97f8-4051-a952-b43d04a33d5f"
+              LastKnownName="Suit"
+              LastKnownLocation="ModelingProject2.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bfa5fd62-7979-46d1-a923-51f82bb180af"
+                  name="Stagiaire"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e2461713-5a55-467e-97b0-4524ee383957"
+                  name="Suit"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="80ed6d83-b9d0-4458-a909-eed2aee94018"
+            name="Password"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="57c3a89c-ea31-452f-8361-5b8893eeeea7"
+            name="Carte de catinne"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="9afa060a-31c9-4925-b2cd-a4c639202a31"
+            name="Inscription"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="471b6ba1-91ae-4ef3-a34d-99887af70115"
+        name="DateTime" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="220d1862-47ef-4295-9418-086650e925f9"
+        name="Formation"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="d219cf35-c5dc-4eec-ad6c-fd10f4f9fa5f"
+            name="Numero"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="c5272dab-f13f-4000-a3dd-46762e3bc9a1"
+            name="Libelle"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="fdbc7e57-71f8-4314-b5dc-8f4aeb75b610"
+            name="Niveau"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="057ced44-97f8-4051-a952-b43d04a33d5f"
+        name="Suit"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="c40aaa9d-633b-473f-ae85-ca5644132d44"
+            isDerived="false"
+            sourceEndRoleName="Suit"
+            targetEndRoleName="Formation"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="220d1862-47ef-4295-9418-086650e925f9"
+              LastKnownName="Formation"
+              LastKnownLocation="ModelingProject2.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="497565f5-4a7a-4ca0-9040-e3f522d537e0"
+                  name="Suit"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="29f5c894-b6e0-4cd7-9d60-a1165b6a4b42"
+                  name="Formation"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="c1300989-2604-4fda-a5fd-a06aca210588"
+            name="Date_formation"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="f986ce0b-3dff-450f-8b9d-5518d2cbb6ff"
+        name="Personne"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="ba9957e4-80a9-46d6-9a58-9f5ce3ec0591"
+            name="Nom"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="1f635d88-020c-4e88-b199-f51b9c111851"
+            name="Prenom"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="a69271cd-6b32-41c5-853f-d52b55967a74"
+            name="Adresse"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="7a7f0751-1287-4897-ae58-1cd296137f51"
+            name="Ville"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="8aeb1dce-2e2c-40e6-b17f-175ff0813683"
+        name="Bizare"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="656002f1-c0b9-4261-bdf5-ef2a013f7c63"
+        LastKnownName="ModeleBDD"
+        LastKnownLocation="Package_1641.uml" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
