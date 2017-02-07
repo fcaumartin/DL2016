@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="c4c86cf7-616b-4394-a8c7-e887ed78aea8" name="UMLUseCaseDiagram2" linkedPackageId="9aa1bce0-c6cc-4d5c-b256-dea49e65d7cb" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="6c1a4848-64fa-496d-9bbc-4be31db7e7c3">
+      <profileInstance Id="7c79f4bc-08c8-498a-baa3-b28199f688f3" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="dcae78f9-a8aa-485e-b3ec-baacfdaf0410">
+      <profileInstance Id="b76ec9de-d60a-4853-9ba5-d339cf49cf78" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="7fc099b6-21cf-46ac-9d01-26b73af4e0a9" name="Usager" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="10e3cc8d-2118-4053-9748-ab87106eafd3" />
+        <targetEnds>
+          <association Id="a57b277f-4635-46cf-a033-b62ca5f72f9e" isDerived="false" sourceEndRoleName="Usager" targetEndRoleName="Consulter le catalogue" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="68688b00-346a-4f1d-a36d-0ff38808173b" LastKnownName="Consulter le catalogue" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2a21a6ce-ca6c-42b7-b2b4-e04e1295a595" name="Usager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="bb9efa6b-3772-4aa5-afb8-f35571a13c15" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e14660f1-49b9-4ee8-aa17-afc266875fe4" name="Consulter le catalogue" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c861c59e-2179-43e6-9f86-1e7ce243181b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="fe46c675-c94f-4e97-9d14-01da3f832604" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="f329b643-d57a-4859-ae24-c9f6d085d012" name="Benevole" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e5b3addf-ba42-483d-bb24-030390d8517e" />
+        <targetEnds>
+          <association Id="664dec5d-6b76-41f9-bb06-127aa9a4c1a5" isDerived="false" sourceEndRoleName="Benevole" targetEndRoleName="Enregistrer un pret" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d83be482-74f6-4499-b013-58c8254f7922" LastKnownName="Enregistrer un pret" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3cc1b1cd-2b5b-429c-bec0-38099c9cfe4d" name="Benevole" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b85893f9-8361-42f9-9555-dc915df55fe5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8a3f0cdc-61fa-4587-a2aa-d7bc821cfe29" name="Enregistrer un pret" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ac79f075-a328-48f4-96fa-0afd0643e155" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7f6306bd-8e42-4790-bc39-00bf3638faad" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="0ff7002d-6df1-4c77-9208-5cc40eac293f" name="Employe" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="20948457-a192-4e5d-b0ff-2ea5efd47cd2" />
+        <targetEnds>
+          <association Id="ab5ccb21-f47c-4c4a-8a9a-82f7a565d3a4" isDerived="false" sourceEndRoleName="Employe" targetEndRoleName="Enregistrer un pret" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d83be482-74f6-4499-b013-58c8254f7922" LastKnownName="Enregistrer un pret" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c9dc77e7-3dc8-47bb-bcf2-aa15864ea138" name="Employe" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f979bb1c-870c-43a1-9e33-719bac3476a9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="71f21bb0-1f29-4e45-96b0-4d78f87e4c7f" name="Enregistrer un pret" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c5ad4c6e-9b6f-4cb0-8010-2b9a57061e28" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="677eb698-4cd3-4e51-8701-702ee9f6ba97" />
+          </association>
+          <association Id="8dd43cef-cc7b-4cc1-bc60-c4694b231ebb" isDerived="false" sourceEndRoleName="Employe" targetEndRoleName="Inscrire un usager" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="45db2fc4-fcaa-4127-a840-f844fbe0d5ed" LastKnownName="Gestion des usagers" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c0d07c4c-df46-410c-ad15-c7b6f7a2b352" name="Employe" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="40928e17-619f-4d85-8c4f-870bb590f222" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="aa238744-a58c-4de4-99d2-563b8c32ac55" name="Inscrire un usager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c2c31b60-d292-4261-a3a0-f1896729f4bb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="207200a1-aec8-4330-96c5-3d42c1f13a8e" />
+          </association>
+          <association Id="6ccb873b-5a8f-4cd6-9eab-a3288e215e65" isDerived="false" sourceEndRoleName="Employe" targetEndRoleName="Gestion des documents" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="bf0f0df8-0519-405c-a5af-ef916db04998" LastKnownName="Gestion des documents" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ce19b6a1-f04c-4377-a02d-507735d18807" name="Employe" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="06063a73-2fa4-487c-b1ee-6492471213a8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8ba9cf0e-3e6f-41cb-bf5b-2d0d12ff9d60" name="Gestion des documents" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1a423889-144d-4d20-8c9e-bfb0ccd14e1d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9fb5412e-b2ef-455d-8485-c8a9cef79e6f" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="68688b00-346a-4f1d-a36d-0ff38808173b" name="Consulter le catalogue" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="37766535-2b1f-40a4-b218-1455ce06afa7" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d83be482-74f6-4499-b013-58c8254f7922" name="Enregistrer un pret" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3a939317-243a-40b4-88b5-b559429023f8" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="45db2fc4-fcaa-4127-a840-f844fbe0d5ed" name="Gestion des usagers" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="07e93ba3-4243-4b2e-8aba-0ec3ea8d1643" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="bf0f0df8-0519-405c-a5af-ef916db04998" name="Gestion des documents" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="830a892e-73f5-4127-8331-2c5c10f199ac" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="9aa1bce0-c6cc-4d5c-b256-dea49e65d7cb" name="ModelingProject2">
+    <elementDefinition Id="ba08a39d-f933-4cbf-96c6-316792e2d574" />
+  </package>
+</useCaseModelRoot>
