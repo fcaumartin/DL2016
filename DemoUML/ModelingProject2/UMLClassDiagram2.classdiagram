@@ -6,7 +6,7 @@
         <elementDefinition Id="656002f1-c0b9-4261-bdf5-ef2a013f7c63" />
         <packagedElements>
           <packageHasNamedElement>
-            <class Id="467b806a-a50b-4439-83d9-97a1f4508d16" name="Vehicule" isAbstract="true" isLeaf="false" isActiveClass="false">
+            <class Id="467b806a-a50b-4439-83d9-97a1f4508d16" name="Vehicule" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="eee93ba7-bd9a-43ed-9be4-3019759d00cd" />
               <ownedAttributesInternal>
                 <property Id="9f4737d2-b079-45e7-b64c-f76912c17f31" name="poid" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">

@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="hotelModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="chambre">
+          <Key>
+            <PropertyRef Name="cha_id" />
+          </Key>
+          <Property Name="cha_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="cha_hot_id" Type="int" Nullable="false" />
+          <Property Name="cha_numero" Type="int" Nullable="false" />
+          <Property Name="cha_capacite" Type="int" Nullable="false" />
+          <Property Name="cha_type" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="client">
+          <Key>
+            <PropertyRef Name="cli_id" />
+          </Key>
+          <Property Name="cli_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="cli_nom" Type="varchar" MaxLength="50" />
+          <Property Name="cli_prenom" Type="varchar" MaxLength="50" />
+          <Property Name="cli_adresse" Type="varchar" MaxLength="50" />
+          <Property Name="cli_ville" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="hotel">
+          <Key>
+            <PropertyRef Name="hot_id" />
+          </Key>
+          <Property Name="hot_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="hot_sta_id" Type="int" Nullable="false" />
+          <Property Name="hot_nom" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="hot_categorie" Type="int" Nullable="false" />
+          <Property Name="hot_adresse" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="hot_ville" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="reservation">
+          <Key>
+            <PropertyRef Name="res_id" />
+          </Key>
+          <Property Name="res_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="res_cha_id" Type="int" Nullable="false" />
+          <Property Name="res_cli_id" Type="int" Nullable="false" />
+          <Property Name="res_date" Type="datetime" Nullable="false" />
+          <Property Name="res_date_debut" Type="datetime" Nullable="false" />
+          <Property Name="res_date_fin" Type="datetime" Nullable="false" />
+          <Property Name="res_prix" Type="money" Nullable="false" />
+          <Property Name="res_arrhes" Type="money" />
+        </EntityType>
+        <EntityType Name="station">
+          <Key>
+            <PropertyRef Name="sta_id" />
+          </Key>
+          <Property Name="sta_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sta_nom" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="sta_altitude" Type="int" />
+        </EntityType>
+        <Association Name="FK__chambre__cha_hot__15502E78">
+          <End Role="hotel" Type="Self.hotel" Multiplicity="1" />
+          <End Role="chambre" Type="Self.chambre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hotel">
+              <PropertyRef Name="hot_id" />
+            </Principal>
+            <Dependent Role="chambre">
+              <PropertyRef Name="cha_hot_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__hotel__hot_sta_i__1273C1CD">
+          <End Role="station" Type="Self.station" Multiplicity="1" />
+          <End Role="hotel" Type="Self.hotel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="station">
+              <PropertyRef Name="sta_id" />
+            </Principal>
+            <Dependent Role="hotel">
+              <PropertyRef Name="hot_sta_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__reservati__res_c__1A14E395">
+          <End Role="chambre" Type="Self.chambre" Multiplicity="1" />
+          <End Role="reservation" Type="Self.reservation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="chambre">
+              <PropertyRef Name="cha_id" />
+            </Principal>
+            <Dependent Role="reservation">
+              <PropertyRef Name="res_cha_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__reservati__res_c__1B0907CE">
+          <End Role="client" Type="Self.client" Multiplicity="1" />
+          <End Role="reservation" Type="Self.reservation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="client">
+              <PropertyRef Name="cli_id" />
+            </Principal>
+            <Dependent Role="reservation">
+              <PropertyRef Name="res_cli_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="hotelModelStoreContainer">
+          <EntitySet Name="chambre" EntityType="Self.chambre" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="client" EntityType="Self.client" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="hotel" EntityType="Self.hotel" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="reservation" EntityType="Self.reservation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="station" EntityType="Self.station" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__chambre__cha_hot__15502E78" Association="Self.FK__chambre__cha_hot__15502E78">
+            <End Role="hotel" EntitySet="hotel" />
+            <End Role="chambre" EntitySet="chambre" />
+          </AssociationSet>
+          <AssociationSet Name="FK__hotel__hot_sta_i__1273C1CD" Association="Self.FK__hotel__hot_sta_i__1273C1CD">
+            <End Role="station" EntitySet="station" />
+            <End Role="hotel" EntitySet="hotel" />
+          </AssociationSet>
+          <AssociationSet Name="FK__reservati__res_c__1A14E395" Association="Self.FK__reservati__res_c__1A14E395">
+            <End Role="chambre" EntitySet="chambre" />
+            <End Role="reservation" EntitySet="reservation" />
+          </AssociationSet>
+          <AssociationSet Name="FK__reservati__res_c__1B0907CE" Association="Self.FK__reservati__res_c__1B0907CE">
+            <End Role="client" EntitySet="client" />
+            <End Role="reservation" EntitySet="reservation" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="hotelModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="chambre">
+          <Key>
+            <PropertyRef Name="cha_id" />
+          </Key>
+          <Property Name="cha_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cha_numero" Type="Int32" Nullable="false" />
+          <Property Name="cha_capacite" Type="Int32" Nullable="false" />
+          <Property Name="cha_type" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="hotel" Relationship="Self.FK__chambre__cha_hot__15502E78" FromRole="chambre" ToRole="hotel" />
+          <NavigationProperty Name="reservations" Relationship="Self.FK__reservati__res_c__1A14E395" FromRole="chambre" ToRole="reservation" />
+        </EntityType>
+        <EntityType Name="client">
+          <Key>
+            <PropertyRef Name="cli_id" />
+          </Key>
+          <Property Name="cli_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cli_nom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="cli_prenom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="cli_adresse" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="cli_ville" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="reservations" Relationship="Self.FK__reservati__res_c__1B0907CE" FromRole="client" ToRole="reservation" />
+        </EntityType>
+        <EntityType Name="hotel">
+          <Key>
+            <PropertyRef Name="hot_id" />
+          </Key>
+          <Property Name="hot_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="hot_nom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="hot_categorie" Type="Int32" Nullable="false" />
+          <Property Name="hot_adresse" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="hot_ville" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="chambres" Relationship="Self.FK__chambre__cha_hot__15502E78" FromRole="hotel" ToRole="chambre" />
+          <NavigationProperty Name="station" Relationship="Self.FK__hotel__hot_sta_i__1273C1CD" FromRole="hotel" ToRole="station" />
+        </EntityType>
+        <EntityType Name="reservation">
+          <Key>
+            <PropertyRef Name="res_id" />
+          </Key>
+          <Property Name="res_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="res_date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="res_date_debut" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="res_date_fin" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="res_prix" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="res_arrhes" Type="Decimal" Precision="19" Scale="4" />
+          <NavigationProperty Name="chambre" Relationship="Self.FK__reservati__res_c__1A14E395" FromRole="reservation" ToRole="chambre" />
+          <NavigationProperty Name="client" Relationship="Self.FK__reservati__res_c__1B0907CE" FromRole="reservation" ToRole="client" />
+        </EntityType>
+        <EntityType Name="station">
+          <Key>
+            <PropertyRef Name="sta_id" />
+          </Key>
+          <Property Name="sta_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sta_nom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="sta_altitude" Type="Int32" />
+          <NavigationProperty Name="hotels" Relationship="Self.FK__hotel__hot_sta_i__1273C1CD" FromRole="station" ToRole="hotel" />
+        </EntityType>
+        <Association Name="FK__chambre__cha_hot__15502E78">
+          <End Role="hotel" Type="Self.hotel" Multiplicity="1" />
+          <End Role="chambre" Type="Self.chambre" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__reservati__res_c__1A14E395">
+          <End Role="chambre" Type="Self.chambre" Multiplicity="1" />
+          <End Role="reservation" Type="Self.reservation" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__reservati__res_c__1B0907CE">
+          <End Role="client" Type="Self.client" Multiplicity="1" />
+          <End Role="reservation" Type="Self.reservation" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__hotel__hot_sta_i__1273C1CD">
+          <End Role="station" Type="Self.station" Multiplicity="1" />
+          <End Role="hotel" Type="Self.hotel" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="hotelEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="chambres" EntityType="Self.chambre" />
+          <EntitySet Name="clients" EntityType="Self.client" />
+          <EntitySet Name="hotels" EntityType="Self.hotel" />
+          <EntitySet Name="reservations" EntityType="Self.reservation" />
+          <EntitySet Name="stations" EntityType="Self.station" />
+          <AssociationSet Name="FK__chambre__cha_hot__15502E78" Association="Self.FK__chambre__cha_hot__15502E78">
+            <End Role="hotel" EntitySet="hotels" />
+            <End Role="chambre" EntitySet="chambres" />
+          </AssociationSet>
+          <AssociationSet Name="FK__reservati__res_c__1A14E395" Association="Self.FK__reservati__res_c__1A14E395">
+            <End Role="chambre" EntitySet="chambres" />
+            <End Role="reservation" EntitySet="reservations" />
+          </AssociationSet>
+          <AssociationSet Name="FK__reservati__res_c__1B0907CE" Association="Self.FK__reservati__res_c__1B0907CE">
+            <End Role="client" EntitySet="clients" />
+            <End Role="reservation" EntitySet="reservations" />
+          </AssociationSet>
+          <AssociationSet Name="FK__hotel__hot_sta_i__1273C1CD" Association="Self.FK__hotel__hot_sta_i__1273C1CD">
+            <End Role="station" EntitySet="stations" />
+            <End Role="hotel" EntitySet="hotels" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="hotelModelStoreContainer" CdmEntityContainer="hotelEntities">
+          <EntitySetMapping Name="chambres">
+            <EntityTypeMapping TypeName="hotelModel.chambre">
+              <MappingFragment StoreEntitySet="chambre">
+                <ScalarProperty Name="cha_id" ColumnName="cha_id" />
+                <ScalarProperty Name="cha_numero" ColumnName="cha_numero" />
+                <ScalarProperty Name="cha_capacite" ColumnName="cha_capacite" />
+                <ScalarProperty Name="cha_type" ColumnName="cha_type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="clients">
+            <EntityTypeMapping TypeName="hotelModel.client">
+              <MappingFragment StoreEntitySet="client">
+                <ScalarProperty Name="cli_id" ColumnName="cli_id" />
+                <ScalarProperty Name="cli_nom" ColumnName="cli_nom" />
+                <ScalarProperty Name="cli_prenom" ColumnName="cli_prenom" />
+                <ScalarProperty Name="cli_adresse" ColumnName="cli_adresse" />
+                <ScalarProperty Name="cli_ville" ColumnName="cli_ville" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hotels">
+            <EntityTypeMapping TypeName="hotelModel.hotel">
+              <MappingFragment StoreEntitySet="hotel">
+                <ScalarProperty Name="hot_id" ColumnName="hot_id" />
+                <ScalarProperty Name="hot_nom" ColumnName="hot_nom" />
+                <ScalarProperty Name="hot_categorie" ColumnName="hot_categorie" />
+                <ScalarProperty Name="hot_adresse" ColumnName="hot_adresse" />
+                <ScalarProperty Name="hot_ville" ColumnName="hot_ville" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="reservations">
+            <EntityTypeMapping TypeName="hotelModel.reservation">
+              <MappingFragment StoreEntitySet="reservation">
+                <ScalarProperty Name="res_id" ColumnName="res_id" />
+                <ScalarProperty Name="res_date" ColumnName="res_date" />
+                <ScalarProperty Name="res_date_debut" ColumnName="res_date_debut" />
+                <ScalarProperty Name="res_date_fin" ColumnName="res_date_fin" />
+                <ScalarProperty Name="res_prix" ColumnName="res_prix" />
+                <ScalarProperty Name="res_arrhes" ColumnName="res_arrhes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="stations">
+            <EntityTypeMapping TypeName="hotelModel.station">
+              <MappingFragment StoreEntitySet="station">
+                <ScalarProperty Name="sta_id" ColumnName="sta_id" />
+                <ScalarProperty Name="sta_nom" ColumnName="sta_nom" />
+                <ScalarProperty Name="sta_altitude" ColumnName="sta_altitude" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="FK__chambre__cha_hot__15502E78" TypeName="hotelModel.FK__chambre__cha_hot__15502E78" StoreEntitySet="chambre">
+            <EndProperty Name="hotel">
+              <ScalarProperty Name="hot_id" ColumnName="cha_hot_id" />
+            </EndProperty>
+            <EndProperty Name="chambre">
+              <ScalarProperty Name="cha_id" ColumnName="cha_id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__reservati__res_c__1A14E395" TypeName="hotelModel.FK__reservati__res_c__1A14E395" StoreEntitySet="reservation">
+            <EndProperty Name="chambre">
+              <ScalarProperty Name="cha_id" ColumnName="res_cha_id" />
+            </EndProperty>
+            <EndProperty Name="reservation">
+              <ScalarProperty Name="res_id" ColumnName="res_id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__reservati__res_c__1B0907CE" TypeName="hotelModel.FK__reservati__res_c__1B0907CE" StoreEntitySet="reservation">
+            <EndProperty Name="client">
+              <ScalarProperty Name="cli_id" ColumnName="res_cli_id" />
+            </EndProperty>
+            <EndProperty Name="reservation">
+              <ScalarProperty Name="res_id" ColumnName="res_id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__hotel__hot_sta_i__1273C1CD" TypeName="hotelModel.FK__hotel__hot_sta_i__1273C1CD" StoreEntitySet="hotel">
+            <EndProperty Name="station">
+              <ScalarProperty Name="sta_id" ColumnName="hot_sta_id" />
+            </EndProperty>
+            <EndProperty Name="hotel">
+              <ScalarProperty Name="hot_id" ColumnName="hot_id" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Aucun" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

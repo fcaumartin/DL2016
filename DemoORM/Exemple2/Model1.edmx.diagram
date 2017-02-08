@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a80da043e2404dce907b570c58ee9bb9" Name="Diagram1">
+        <EntityTypeShape EntityType="hotelModel.chambre" Width="1.5" PointX="5.125" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="hotelModel.client" Width="1.5" PointX="5.875" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="hotelModel.hotel" Width="1.5" PointX="2.875" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="hotelModel.reservation" Width="1.5" PointX="7.75" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="hotelModel.station" Width="1.5" PointX="0.625" PointY="0.5" IsExpanded="true" />
+        <AssociationConnector Association="hotelModel.FK__chambre__cha_hot__15502E78" ManuallyRouted="false" />
+        <AssociationConnector Association="hotelModel.FK__reservati__res_c__1A14E395" ManuallyRouted="false" />
+        <AssociationConnector Association="hotelModel.FK__reservati__res_c__1B0907CE" ManuallyRouted="false" />
+        <AssociationConnector Association="hotelModel.FK__hotel__hot_sta_i__1273C1CD" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

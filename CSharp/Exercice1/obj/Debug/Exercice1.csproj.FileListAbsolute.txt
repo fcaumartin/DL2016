@@ -1,0 +1,5 @@
+C:\Users\frc\Desktop\CSharp\Exercice1\bin\Debug\Exercice1.exe.config
+C:\Users\frc\Desktop\CSharp\Exercice1\bin\Debug\Exercice1.exe
+C:\Users\frc\Desktop\CSharp\Exercice1\bin\Debug\Exercice1.pdb
+C:\Users\frc\Desktop\CSharp\Exercice1\obj\Debug\Exercice1.exe
+C:\Users\frc\Desktop\CSharp\Exercice1\obj\Debug\Exercice1.pdb

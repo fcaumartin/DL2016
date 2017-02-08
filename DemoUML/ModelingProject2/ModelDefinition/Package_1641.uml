@@ -8,7 +8,7 @@
       <class
         Id="eee93ba7-bd9a-43ed-9be4-3019759d00cd"
         name="Vehicule"
-        isAbstract="true"
+        isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <ownedAttributesInternal>

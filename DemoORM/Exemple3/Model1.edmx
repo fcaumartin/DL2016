@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="Model1StoreContainer">
+    <EntitySet Name="StagiaireSet" EntityType="Model1.Store.StagiaireSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FormationSet" EntityType="Model1.Store.FormationSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="StagiaireFormation" EntityType="Model1.Store.StagiaireFormation" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_StagiaireFormation_Stagiaire" Association="Model1.Store.FK_StagiaireFormation_Stagiaire">
+      <End Role="Stagiaire" EntitySet="StagiaireSet" />
+      <End Role="StagiaireFormation" EntitySet="StagiaireFormation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StagiaireFormation_Formation" Association="Model1.Store.FK_StagiaireFormation_Formation">
+      <End Role="Formation" EntitySet="FormationSet" />
+      <End Role="StagiaireFormation" EntitySet="StagiaireFormation" />
+    </AssociationSet>
+    <AssociationSet Name="StagiaireStagiaire" Association="Model1.Store.StagiaireStagiaire">
+      <End Role="Stagiaire" EntitySet="StagiaireSet" />
+      <End Role="Stagiaire1" EntitySet="StagiaireSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="StagiaireSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nom" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Prenom" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Stagiaire2_Id" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="FormationSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Niveau" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Libelle" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StagiaireFormation">
+    <Key>
+      <PropertyRef Name="Stagiaire_Id" />
+      <PropertyRef Name="Formation_Id" />
+    </Key>
+    <Property Name="Stagiaire_Id" Type="int" Nullable="false" />
+    <Property Name="Formation_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="StagiaireStagiaire">
+    <End Role="Stagiaire" Type="Model1.Store.StagiaireSet" Multiplicity="0..1" />
+    <End Role="Stagiaire1" Type="Model1.Store.StagiaireSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stagiaire">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Stagiaire1">
+        <PropertyRef Name="Stagiaire2_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StagiaireFormation_Stagiaire">
+    <End Role="Stagiaire" Type="Model1.Store.StagiaireSet" Multiplicity="1" />
+    <End Role="StagiaireFormation" Type="Model1.Store.StagiaireFormation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stagiaire">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="StagiaireFormation">
+        <PropertyRef Name="Stagiaire_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StagiaireFormation_Formation">
+    <End Role="StagiaireFormation" Type="Model1.Store.StagiaireFormation" Multiplicity="*" />
+    <End Role="Formation" Type="Model1.Store.FormationSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Formation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="StagiaireFormation">
+        <PropertyRef Name="Formation_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="Model1Container" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="StagiaireSet" EntityType="Model1.Stagiaire" />
+          <EntitySet Name="FormationSet" EntityType="Model1.Formation" />
+          <AssociationSet Name="StagiaireFormation" Association="Model1.StagiaireFormation">
+            <End Role="Stagiaire" EntitySet="StagiaireSet" />
+            <End Role="Formation" EntitySet="FormationSet" />
+          </AssociationSet>
+          <AssociationSet Name="StagiaireStagiaire" Association="Model1.StagiaireStagiaire">
+            <End Role="Stagiaire" EntitySet="StagiaireSet" />
+            <End Role="Stagiaire1" EntitySet="StagiaireSet" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Stagiaire">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nom" Type="String" Nullable="false" />
+          <Property Name="Prenom" Type="String" Nullable="false" />
+          <NavigationProperty Name="Formation" Relationship="Model1.StagiaireFormation" FromRole="Stagiaire" ToRole="Formation" />
+          <NavigationProperty Name="Stagiaire1" Relationship="Model1.StagiaireStagiaire" FromRole="Stagiaire" ToRole="Stagiaire1" />
+          <NavigationProperty Name="Stagiaire2" Relationship="Model1.StagiaireStagiaire" FromRole="Stagiaire1" ToRole="Stagiaire" />
+        </EntityType>
+        <EntityType Name="Formation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Niveau" Type="String" Nullable="false" />
+          <Property Name="Libelle" Type="String" Nullable="false" />
+          <NavigationProperty Name="Stagiaire" Relationship="Model1.StagiaireFormation" FromRole="Formation" ToRole="Stagiaire" />
+        </EntityType>
+        <Association Name="StagiaireFormation">
+          <End Type="Model1.Stagiaire" Role="Stagiaire" Multiplicity="*" />
+          <End Type="Model1.Formation" Role="Formation" Multiplicity="*" />
+        </Association>
+        <Association Name="StagiaireStagiaire">
+          <End Type="Model1.Stagiaire" Role="Stagiaire" Multiplicity="0..1" />
+          <End Type="Model1.Stagiaire" Role="Stagiaire1" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Model1Container">
+    <EntitySetMapping Name="StagiaireSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Stagiaire)">
+        <MappingFragment StoreEntitySet="StagiaireSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="Prenom" ColumnName="Prenom" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FormationSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Formation)">
+        <MappingFragment StoreEntitySet="FormationSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Niveau" ColumnName="Niveau" />
+          <ScalarProperty Name="Libelle" ColumnName="Libelle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="StagiaireFormation" TypeName="Model1.StagiaireFormation" StoreEntitySet="StagiaireFormation">
+      <EndProperty Name="Stagiaire">
+        <ScalarProperty Name="Id" ColumnName="Stagiaire_Id" />
+      </EndProperty>
+      <EndProperty Name="Formation">
+        <ScalarProperty Name="Id" ColumnName="Formation_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="StagiaireStagiaire" TypeName="Model1.StagiaireStagiaire" StoreEntitySet="StagiaireSet">
+      <EndProperty Name="Stagiaire">
+        <ScalarProperty Name="Id" ColumnName="Stagiaire2_Id" />
+      </EndProperty>
+      <EndProperty Name="Stagiaire1">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="Stagiaire2_Id" IsNull="false" />
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Aucun" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
