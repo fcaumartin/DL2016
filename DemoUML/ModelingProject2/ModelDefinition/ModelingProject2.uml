@@ -1541,12 +1541,12 @@
             customInteractionOperator="Autant que de documents">
             <coveredLifelines>
               <lifelineMoniker
-                Id="2290e955-5656-43e5-9d02-646697c27471"
-                LastKnownName="Systeme"
-                LastKnownLocation="ModelingProject2.uml" />
-              <lifelineMoniker
                 Id="64d28734-69a3-4f0e-9277-2645020e7420"
                 LastKnownName="Usager"
+                LastKnownLocation="ModelingProject2.uml" />
+              <lifelineMoniker
+                Id="2290e955-5656-43e5-9d02-646697c27471"
+                LastKnownName="Systeme"
                 LastKnownLocation="ModelingProject2.uml" />
             </coveredLifelines>
             <operands>
@@ -1555,12 +1555,12 @@
                 name="InteractionOperand1">
                 <coveredLifelines>
                   <lifelineMoniker
-                    Id="2290e955-5656-43e5-9d02-646697c27471"
-                    LastKnownName="Systeme"
-                    LastKnownLocation="ModelingProject2.uml" />
-                  <lifelineMoniker
                     Id="64d28734-69a3-4f0e-9277-2645020e7420"
                     LastKnownName="Usager"
+                    LastKnownLocation="ModelingProject2.uml" />
+                  <lifelineMoniker
+                    Id="2290e955-5656-43e5-9d02-646697c27471"
+                    LastKnownName="Systeme"
                     LastKnownLocation="ModelingProject2.uml" />
                 </coveredLifelines>
                 <guard>
@@ -1600,22 +1600,22 @@
             </operands>
           </combinedFragment>
           <operandOccurrenceSpecification
-            Id="a2dad75b-206f-4b76-8c02-b61821437931"
-            name="OperandOccurrenceSpecification3">
-            <covered>
-              <lifelineMoniker
-                Id="64d28734-69a3-4f0e-9277-2645020e7420"
-                LastKnownName="Usager"
-                LastKnownLocation="ModelingProject2.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="372a9656-5b28-4f84-b87c-0335b804dd87"
             name="OperandOccurrenceSpecification1">
             <covered>
               <lifelineMoniker
                 Id="2290e955-5656-43e5-9d02-646697c27471"
                 LastKnownName="Systeme"
+                LastKnownLocation="ModelingProject2.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="a2dad75b-206f-4b76-8c02-b61821437931"
+            name="OperandOccurrenceSpecification3">
+            <covered>
+              <lifelineMoniker
+                Id="64d28734-69a3-4f0e-9277-2645020e7420"
+                LastKnownName="Usager"
                 LastKnownLocation="ModelingProject2.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -1818,22 +1818,22 @@
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="19e2cff7-da2e-488c-b67e-8084c08faf40"
-            name="MessageOccurrenceSpecification15">
-            <covered>
-              <lifelineMoniker
-                Id="2290e955-5656-43e5-9d02-646697c27471"
-                LastKnownName="Systeme"
-                LastKnownLocation="ModelingProject2.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="a07d2fcb-dd67-49e7-b691-fdd7b426d9ae"
             name="MessageOccurrenceSpecification16">
             <covered>
               <lifelineMoniker
                 Id="64d28734-69a3-4f0e-9277-2645020e7420"
                 LastKnownName="Usager"
+                LastKnownLocation="ModelingProject2.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="19e2cff7-da2e-488c-b67e-8084c08faf40"
+            name="MessageOccurrenceSpecification15">
+            <covered>
+              <lifelineMoniker
+                Id="2290e955-5656-43e5-9d02-646697c27471"
+                LastKnownName="Systeme"
                 LastKnownLocation="ModelingProject2.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -1962,7 +1962,7 @@
         <messages>
           <message
             Id="f275afb4-ed4f-4eac-b518-108bfe15e4fa"
-            name="Message1"
+            name="Demande de creation d'un nouvel emprunt"
             messageKind="Complete"
             messageSort="SynchCall"
             createSelfMessage="false">
@@ -2000,7 +2000,7 @@
           </message>
           <message
             Id="574166da-3083-4144-b9fc-32fca3cef3e9"
-            name="Message2"
+            name="L'usager rentre le code lecteur"
             messageKind="Complete"
             messageSort="SynchCall"
             createSelfMessage="false">

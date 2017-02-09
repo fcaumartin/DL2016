@@ -1,19 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="8ba46b49-7404-4df2-98e2-41d38351f262" name="Sequence2" linkedPackageId="e2755682-54fe-4cc3-a2c8-a2f4ce6172ee" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="9b5f398e-37b4-4e47-84ff-fbcee0fe19fb">
-      <profileInstance Id="b0857bd1-b19a-471e-afa7-af830090ce30" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="f691f959-1409-48a5-a88c-2af45ee32b1c">
-      <profileInstance Id="3284d68a-0341-45c3-9bbd-6b3a20ee74a2" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <packageHasNamedElement>
       <interaction Id="eb78067e-8e0b-4b47-893a-19c4e0be3033" name="Sequence2" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
@@ -146,15 +132,15 @@
           <combinedFragment Id="5334ed5d-3c01-432c-81b8-16acfa94eef1" name="CombinedFragment1" interactionOperator="Alt" customInteractionOperator="Autant que de documents">
             <elementDefinition Id="3ccaf403-571d-43cc-9d73-0b55255a60db" />
             <coveredLifelines>
-              <lifelineMoniker Id="50bccd31-9ec0-4d6b-952a-c99229231e80" LastKnownName="Systeme" />
               <lifelineMoniker Id="e2f66133-e2ab-4bb8-a5b0-eaf9b8e712c2" LastKnownName="Usager" />
+              <lifelineMoniker Id="50bccd31-9ec0-4d6b-952a-c99229231e80" LastKnownName="Systeme" />
             </coveredLifelines>
             <operands>
               <interactionOperand Id="4721b300-5800-48f6-b39b-e7949e761827" name="InteractionOperand1">
                 <elementDefinition Id="e896e5b4-8b49-47c4-a81f-e8bce4652aeb" />
                 <coveredLifelines>
-                  <lifelineMoniker Id="50bccd31-9ec0-4d6b-952a-c99229231e80" LastKnownName="Systeme" />
                   <lifelineMoniker Id="e2f66133-e2ab-4bb8-a5b0-eaf9b8e712c2" LastKnownName="Usager" />
+                  <lifelineMoniker Id="50bccd31-9ec0-4d6b-952a-c99229231e80" LastKnownName="Systeme" />
                 </coveredLifelines>
                 <guard>
                   <interactionConstraint Id="e36e9007-67ba-4e61-8f84-6b745b8cba35">
@@ -180,16 +166,16 @@
               </interactionOperand>
             </operands>
           </combinedFragment>
-          <operandOccurrenceSpecification Id="64f8a019-7bbf-4ac7-a221-abd04a876b5e" name="OperandOccurrenceSpecification3">
-            <elementDefinition Id="a2dad75b-206f-4b76-8c02-b61821437931" />
-            <covered>
-              <lifelineMoniker Id="e2f66133-e2ab-4bb8-a5b0-eaf9b8e712c2" LastKnownName="Usager" />
-            </covered>
-          </operandOccurrenceSpecification>
           <operandOccurrenceSpecification Id="64b636f9-63eb-4100-851d-01be5a9e4899" name="OperandOccurrenceSpecification1">
             <elementDefinition Id="372a9656-5b28-4f84-b87c-0335b804dd87" />
             <covered>
               <lifelineMoniker Id="50bccd31-9ec0-4d6b-952a-c99229231e80" LastKnownName="Systeme" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="64f8a019-7bbf-4ac7-a221-abd04a876b5e" name="OperandOccurrenceSpecification3">
+            <elementDefinition Id="a2dad75b-206f-4b76-8c02-b61821437931" />
+            <covered>
+              <lifelineMoniker Id="e2f66133-e2ab-4bb8-a5b0-eaf9b8e712c2" LastKnownName="Usager" />
             </covered>
           </operandOccurrenceSpecification>
           <behaviorExecutionSpecification Id="a91e2349-c38d-4906-be17-2295c01c2240" name="BehaviorExecutionSpecification3">
@@ -305,16 +291,16 @@
               <lifelineMoniker Id="e2f66133-e2ab-4bb8-a5b0-eaf9b8e712c2" LastKnownName="Usager" />
             </covered>
           </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="293666d4-679b-4bc9-ac74-df449a7abe2a" name="MessageOccurrenceSpecification15">
-            <elementDefinition Id="19e2cff7-da2e-488c-b67e-8084c08faf40" />
-            <covered>
-              <lifelineMoniker Id="50bccd31-9ec0-4d6b-952a-c99229231e80" LastKnownName="Systeme" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="5d39475b-26ae-4a98-9132-689ea6ad7d2b" name="MessageOccurrenceSpecification16">
             <elementDefinition Id="a07d2fcb-dd67-49e7-b691-fdd7b426d9ae" />
             <covered>
               <lifelineMoniker Id="e2f66133-e2ab-4bb8-a5b0-eaf9b8e712c2" LastKnownName="Usager" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="293666d4-679b-4bc9-ac74-df449a7abe2a" name="MessageOccurrenceSpecification15">
+            <elementDefinition Id="19e2cff7-da2e-488c-b67e-8084c08faf40" />
+            <covered>
+              <lifelineMoniker Id="50bccd31-9ec0-4d6b-952a-c99229231e80" LastKnownName="Systeme" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="c75b1860-dbd2-41f1-a853-387ac597ca2c" name="ExecutionOccurrenceSpecification8">
@@ -365,7 +351,7 @@
           </lifeline>
         </lifelines>
         <messages>
-          <message Id="bab924f7-25c9-4ed7-b487-78c180fc0401" name="Message1" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false">
+          <message Id="bab924f7-25c9-4ed7-b487-78c180fc0401" name="Demande de creation d'un nouvel emprunt" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false">
             <elementDefinition Id="f275afb4-ed4f-4eac-b518-108bfe15e4fa" />
             <sendEvent>
               <messageOccurrenceSpecificationMoniker Id="c8a4bad6-a243-456c-8759-05b536504efa" LastKnownName="MessageOccurrenceSpecification1" />
@@ -383,7 +369,7 @@
               <messageOccurrenceSpecificationMoniker Id="752fce78-19a2-4e39-aa83-afcae05d97b6" LastKnownName="MessageOccurrenceSpecification4" />
             </receiveEvent>
           </message>
-          <message Id="dfc8b318-6162-4735-a201-3b26d0402579" name="Message2" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false">
+          <message Id="dfc8b318-6162-4735-a201-3b26d0402579" name="L'usager rentre le code lecteur" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false">
             <elementDefinition Id="574166da-3083-4144-b9fc-32fca3cef3e9" />
             <sendEvent>
               <messageOccurrenceSpecificationMoniker Id="7ec30d42-d0d3-404f-a23a-9cf56d33e34d" LastKnownName="MessageOccurrenceSpecification5" />
@@ -524,5 +510,19 @@
   </packagedElements>
   <package Id="e2755682-54fe-4cc3-a2c8-a2f4ce6172ee" name="ModelingProject2">
     <elementDefinition Id="ba08a39d-f933-4cbf-96c6-316792e2d574" />
+    <profileInstances>
+      <packageHasProfileInstances Id="9b5f398e-37b4-4e47-84ff-fbcee0fe19fb">
+        <profileInstance Id="b0857bd1-b19a-471e-afa7-af830090ce30" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="f691f959-1409-48a5-a88c-2af45ee32b1c">
+        <profileInstance Id="3284d68a-0341-45c3-9bbd-6b3a20ee74a2" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </SequenceDesignerModel>
