@@ -21,9 +21,9 @@ namespace Calculatrice
             reponse = Console.ReadLine();
             n2 = Convert.ToDouble(reponse);
 
-            somme = n1 + n2;
+            somme = n1 / n2;
 
-            Console.WriteLine("La somme de {0} + {1} = {2}",n1, n2, somme);
+            Console.WriteLine("La somme de {0} / {1} = {2}",n1, n2, somme);
             //Console.WriteLine("La somme de " + n1 + " + " + n2 + " = " + somme);
         }
     }
