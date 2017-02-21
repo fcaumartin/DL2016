@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercice1", "Exercice1\Exer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApplication1", "WpfApplication1\WpfApplication1.csproj", "{CC26C938-161A-47AA-BE9B-209AD98DCC19}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Evenements", "Evenements\Evenements.csproj", "{AA734EB5-A2A2-48F5-A0C2-955B583F7F9C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{CC26C938-161A-47AA-BE9B-209AD98DCC19}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC26C938-161A-47AA-BE9B-209AD98DCC19}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC26C938-161A-47AA-BE9B-209AD98DCC19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA734EB5-A2A2-48F5-A0C2-955B583F7F9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA734EB5-A2A2-48F5-A0C2-955B583F7F9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA734EB5-A2A2-48F5-A0C2-955B583F7F9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA734EB5-A2A2-48F5-A0C2-955B583F7F9C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
