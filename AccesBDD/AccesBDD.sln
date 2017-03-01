@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exemple1", "Exemple1\Exemple1.csproj", "{C6834483-1454-4959-B0F8-E1462F3B28AB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatternDAO", "PatternDAO\PatternDAO.csproj", "{1DE62466-AD2A-4798-875D-79039FFE7CD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{96FFD915-B1BF-4029-B138-C83CF69E9690}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{C6834483-1454-4959-B0F8-E1462F3B28AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6834483-1454-4959-B0F8-E1462F3B28AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6834483-1454-4959-B0F8-E1462F3B28AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DE62466-AD2A-4798-875D-79039FFE7CD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DE62466-AD2A-4798-875D-79039FFE7CD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DE62466-AD2A-4798-875D-79039FFE7CD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DE62466-AD2A-4798-875D-79039FFE7CD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96FFD915-B1BF-4029-B138-C83CF69E9690}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96FFD915-B1BF-4029-B138-C83CF69E9690}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96FFD915-B1BF-4029-B138-C83CF69E9690}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96FFD915-B1BF-4029-B138-C83CF69E9690}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
