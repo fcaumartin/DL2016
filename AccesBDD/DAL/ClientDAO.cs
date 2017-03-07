@@ -15,7 +15,7 @@ namespace DAL
             _connect = new SqlConnection(chaine);
         }
         public void Insert(Client cli) {
-            SqlCommand requete = new SqlCommand("insert into client(cli_nom,cli_prenom, cli_ville) values(@nom, @prenom,@ville)", _connect);
+            SqlCommand requete = new SqlCommand("insert into client(cli_nom,cli_prenom, cli_ville) values (@nom, @prenom,@ville)", _connect);
             requete.Parameters.AddWithValue("@nom", cli.Nom);
             requete.Parameters.AddWithValue("@prenom", cli.Prenom);
             requete.Parameters.AddWithValue("@ville", cli.Ville);
@@ -28,6 +28,7 @@ namespace DAL
         public void Update(Client cli) { }
         public void Delete(Client cli) { }
         //public Client Find(int id) { }
+
         public List<Client> List() {
             _connect.Open();
             List<Client> resultat = new List<Client>();
